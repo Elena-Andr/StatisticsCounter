@@ -1,22 +1,17 @@
 package ru.innopolis.elenas.wordsstat;
 
-
 import org.junit.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.util.Map;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class StatisticsCounterTest {
-    private static Logger logger = LoggerFactory.getLogger(StatisticsCounterTest.class);
-    private StatisticsCounter statisticsCounter = new StatisticsCounter();
-
-    @BeforeClass
-    public static void beforeTest(){}
+    private static final Logger log = LoggerFactory.getLogger(StatisticsCounterTest.class);
+    private StatisticsCounter statisticsCounter;
 
     @Before
     public void before() {
@@ -50,10 +45,4 @@ public class StatisticsCounterTest {
 
         assertTrue("Gathering stat. failed", results.size() == 0);
     }
-
-    @After
-    public void after(){}
-
-    @AfterClass
-    public static void afterTest(){}
 }
